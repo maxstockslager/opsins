@@ -34,9 +34,7 @@ for CELL_NUMBER = 1:height(data_directory)
 
     % for each sweep in this cell's folder,
     for sweep_number = 1:numel(sweep_folders)
-
-        
-        
+       
         SWEEP_FILEPATH = sweep_folders{sweep_number};
         fprintf('      -processing sweep: %s\n', sweep_folder_names{sweep_number});
 
@@ -61,16 +59,3 @@ for CELL_NUMBER = 1:height(data_directory)
 
     end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
