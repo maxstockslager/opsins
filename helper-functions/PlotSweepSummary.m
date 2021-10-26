@@ -4,8 +4,7 @@ plot(summary.t, summary.y, 'k.', 'MarkerSize', 0.5, 'Color', 0.25*[1 1 1])
 hold on
 plot(summary.t, summary.y_lowpass, 'r', 'LineWidth', 2)
 set(gcf, 'Color', 'white');
-title([summary.date, ', ', summary.cell_name, ', ', summary.trial_name, ...
-    ', ', summary.sweep_name], 'Interpreter', 'none')
+title(BuildPlotTitle(summary), 'Interpreter', 'none')
 xlabel('Time (s)');
 ylabel('Current (pA)');
 plot([0, max(summary.t)], summary.baseline*[1 1], 'b--');
@@ -21,8 +20,7 @@ plot(summary.peak_t, summary.peak_y, 'k.', 'MarkerSize', 0.5, 'Color', 0.25*[1 1
 hold on
 plot(summary.peak_t, summary.peak_lowpass, 'r', 'LineWidth', 2)
 set(gcf, 'Color', 'white');
-title([summary.date, ', ', summary.cell_name, ', ', summary.trial_name, ...
-    ', ', summary.sweep_name], 'Interpreter', 'none')
+title(BuildPlotTitle(summary), 'Interpreter', 'none')
 xlabel('Time (s)');
 ylabel('Current (pA)');
 plot([min(summary.peak_t), max(summary.peak_t)], summary.baseline*[1 1], 'b--');

@@ -2,7 +2,7 @@ function [y_lowpass, baseline] = ApplyMovingAverageFilter(sweep, moving_average_
 dt = max(sweep.t) / (length(sweep.t) - 1);
 moving_average_window = round(moving_average_window_sec/dt); % just for peak detection
 
-baseline = quantile(sweep.y, 0.60); 
+baseline = quantile(sweep.y, 0.50); 
 y_baseline_subtracted = sweep.y - baseline; 
 
 
